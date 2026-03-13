@@ -39,4 +39,38 @@ import Layout from "../layouts/Layout.astro";
 	</section>
 
 	<!-- PORTFOLIO -->
+	<section id="portfolio" class="portfolio">
+		<h2>Portfolio</h2>
+		<p class="section-subtitle">Algunos de mis proyectos recientes</p>
+		<div class="portfolio__grid">
+			<article class="portfolio-card">
+				<div class="portfolio-card__img">🌐</div>
+				<div class="portfolio-card__body">
+					<h3>Proyecto Alpha</h3>
+					<p>
+						Aplicación web construida con Astro y React. Optimizada
+						para velocidad y SEO.
+					</p>
+					<div class="portfolio-card__tags">
+						<span>Astro</span><span>React</span>
+					</div>
+					<a href="#" class="btn btn--sm">Ver proyecto →</a>
+				</div>
+			</article>
+			<article class="portfolio-card">
+				<div class="portfolio-card__img">⚡</div>
+				<div class="portfolio-card__body">
+					<h3>Proyecto Beta</h3>
+					<p>
+						Dashborad interactivo con visualización de datos en
+						tiempo real.
+					</p>
+					<div class="portfolio-card__tags">
+						<span>TypeScript</span><span>Node.js</span>
+					</div>
+					<a href="#" class="btn btn--sm">Ver proyecto →</a>
+				</div>
+			</article>
+		</div>
+	</section>
 </Layout>
