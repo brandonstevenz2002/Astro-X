@@ -201,4 +201,38 @@ import Layout from "../layouts/Layout.astro";
 	</section>
 
 	<!-- CONTACTO -->
+	 <section id="contacto" class="contacto">
+		<h2>Contacto</h2>
+		<form>
+			<input type="text" placeholder="Tu nombre" required />
+			<input type="email" placeholder="Tu correo" required />
+			<textarea placeholder="Tu mensaje"></textarea>
+			<button type="submit">Enviar</button>
+		</form>
+	</section>
+
+	<script>
+		const counters = document.querySelectorAll('.stat-number');
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					const el = entry.target;
+					const target = parseInt(el.dataset.target ?? '0', 10);
+					let current = 0;
+					const step = Math.ceil(target / 60);
+					const timer = setInterval(() => {
+						current += step;
+						if (current >= target) {
+							el.textContent = String(target);
+							clearInterval(timer);
+						} else {
+							el.textContent = String(current);
+						}
+					}, 30);
+					observer.unobserve(el);
+				}
+			});
+		}, { threshold: 0.5 });
+		counters.forEach(c => observer.observe(c));
+	</script>
 </Layout>
